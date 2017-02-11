@@ -1,0 +1,239 @@
+
+ASSIGNMENT 1 PYTHON
+1.	Program to enter length and breadth of a rectangle and calculate area and perimeter of the rectangle
+PROGRAM
+l=input("Enter the length: ")
+b=input("Enter the breadth: ")
+a=l*b
+p=2*(l+b)
+print("Area of rectangle is %s") %(a)
+print("Perimeter of rectangle is %s") %(p)
+
+OUTPUT:
+ 
+2.	WPP TO ENTER RADIUS OF CIRCLE AND CALCULATE AREA AND CIRCUMFERENCE OF CIRCLE
+PROGRAM
+r=input("Enter the radius of circle: ")
+a=3.14*r**2
+c=2*3.14*r
+print " "
+print("Area of circle is %s") %(a)
+print("Circumference of circle is %s") %(c)
+
+OUTPUT:
+ 
+
+
+3.	WPP TO ENTER VALUE IN CENTIMETRE AND CONVERT IT TO METER AND KILOMETRE
+PROGRAM
+c=float(input("Enter the length in centimeter: "))
+m=c/100
+km=c/100000
+m=c/100
+print("%s C.M = %f M") %(c,m)
+print("%s C.M = %f K.M") %(c,km)
+
+OUTPUT:
+ 
+
+4.	WPP TO ENTER VALUE IN CELSIUS AND CONVERT IT TO FAHRENHEIT
+PROGRAM
+c=float(input("Enter the temperature in celcius: "))
+f=c*(9.0/5)+32
+print("Temperature in terms of fahrenheit is %f") %(f)
+
+OUTPUT:
+ 
+
+
+
+
+
+
+
+
+
+5.	WPP TO ENTER VALUE IN DAYS AND CONVERT IN FORM OF YEAR, MONTHS AND DAYS
+PROGRAM
+d=int(input("Enter number os days: "))
+y=d/360
+d1=d%360
+m=d1/30
+d1=d1%30
+print("Years: %d") %(y)
+print("Month: %d") %(m)
+print("Days : %d") %(d1)
+
+OUTPUT:
+ 
+
+6.	WPP TO FIND POWER OF ANY NUMBER IN FORM OF X^Y WHERE X AND YARE USER INPUTS
+PROGRAM
+print "Result will be displayed in the form of x^y"
+x=float(input("Enter value of x: "))
+y=float(input("Enter value of y: "))
+p=x**y
+print("x^y = %f") %(p)
+
+OUTPUT:
+ 
+
+
+
+
+
+
+
+
+7.	WPP TO ENTER 2 ANGLES AND USING FUNCTION THIRDANGLE( ANGLE1, ANGLE2 ) CALCULATE THIRD ANGLE
+
+PROGRAM
+def thirdangle(angle1,angle2):
+    angle3=180-(angle1+angle2)
+    return angle3;
+angle1=float(input("Enter angle1: "))
+if angle1<180:
+    angle2=float(input("Enter angle2: "))
+    if (angle1+angle2)>=180:
+        print("Sum of two angles should not be greater or equal to 180")
+        exit
+    else:
+        angle3=thirdangle(angle1,angle2)
+        print("Value of angle3 is %f ") %(angle3)
+else:
+    print("Angle value should be less than 180")
+
+OUTPUT:
+ 
+
+
+
+
+
+
+
+
+
+8.	WPP TO ENTER BASE AND HEIGHT OF TRIANGLE AND CALCULATE AREA OF TRIANGLE
+PROGRAM
+b=float(input("Enter the base of triangle: "))
+h=float(input("Enter the height of triangle: "))
+a=(1.0/2)*b*h
+print("Area of triangle is %f") %(a)
+
+OUTPUT:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.	WPP TO ENTER MARKS OF 5 SUBJECTS AND FIND THE MEAN OF 5 SUBJECTS, CALCULATE PERCENTAGE. IF PERCENTAGE IS LESS THAN 35 PRINT FAIL ELSE PRINT PASS
+
+PROGRAM
+print("Enter marks received in subjects out of 50")
+sub1=float(input("Enter the marks in subject1: "))
+sub2=float(input("Enter the marks in subject2: "))
+sub3=float(input("Enter the marks in subject3: "))
+sub4=float(input("Enter the marks in subject4: "))
+sub5=float(input("Enter the marks in subject5: "))
+sum=sub1+sub2+sub3+sub4+sub5
+avg=sum/5
+pcnt=(sum/250.0)*100
+print("Mean value is %f") %(avg)
+print("Percentage is %f ") %(pcnt)
+print "STATUS:"
+if pcnt<35:
+    print("fail")
+else:
+    print("pass")
+
+OUTPUT:
+ 
+
+
+
+
+
+
+
+10.	WPP TO ENTER PRINCIPAL AMOUNT, TIME AND INTEREST                   RATE      CREATE SIMPLE_INTEREST(PRINCIPAL, TIME, RATE) FUNCTION TO CALCULATE SIMPLE INTEREST
+
+PROGRAM
+def simple_interest(principal,time,rate):
+    s_int=(principal*rate*time)/100
+    return s_int;
+pa=float(input("Enter the principal amount : "))
+time=float(input("Enter time in terms of days: "))
+rate=float(input("Enter rate : "))
+s=simple_interest(pa,time,rate)
+print("Simple Interest is %f") %(s)
+OUTPUT:
+ 
+
+
+
+
+
+
+11.	WPP TO ENTER PRINCIPAL AMOUNT, TIME AND INTEREST RATE. CREATE COMPOUND_INTEREST(PRINCIPAL,TIME,RATE) FUNCTION TO CALCULATE COMPOND INTEREST
+PROGRAM
+def compund_interest(principal,time,rate):
+    n=int(input(" Number of times per year interest is compounded : "))
+    c1_int=principal*(1+(rate/(n*100)))**(n*time)
+    return c1_int;
+          
+pa=float(input("Enter the principal amount : "))
+time=float(input("Enter time in terms of years: "))
+rate=float(input("Enter rate : "))
+c=compund_interest(pa,time,rate)
+print("Compund interest is %f") %(c)
+
+OUTPUT:
+ 
+
+
+
+
+12.	WRITE A PYTHON PROGRAM THAT ACCEPTSAN INTEGER(N) AND COMPUTES THE VALUE n+nn+nnn
+Sample value of n is 15
+Expected Result :615
+
+PROGRAM
+a = int(input("Input an integer : "))
+n1 = int( "%s" % a )
+n2 = int( "%s%s" % (a,a) )
+n3 = int( "%s%s%s" % (a,a,a) )
+print("Value of %d + %d%d + %d%d%d is %d") %(a,a,a,a,a,a,n1+n2+n3)
+
+OUTPUT:
+ 
+
+13.	WRITE A PYTHON PROGRAM TO FIND WHETHER A GIVEN NUMBER (ACCEPT FROM THE USER) IS EVEN OR ODD, PRINT OUT AN APPROPRIATE MESSAGE TO THE USER. 
+
+PROGRAM
+n=float(input("Enter the number to check whether the given number is even or odd :"))
+if n%2==0:
+    print("%d is even")%(n)
+else:
+    print("%f is odd")%(n)
+
+OUTPUT:
+ 
